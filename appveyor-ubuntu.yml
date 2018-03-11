@@ -7,4 +7,4 @@ build_script:
 before_test:
   - pwsh: Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser; $Error.Clear()
 test_script:
-  - pwsh: Invoke-Pester
+  - pwsh: Invoke-Pester; $?; $Error
